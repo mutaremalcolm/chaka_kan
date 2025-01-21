@@ -1,7 +1,7 @@
 import { useSortable } from "@dnd-kit/sortable";
 import { UniqueIdentifier } from "@dnd-kit/core";
 import { EllipsisVertical } from "lucide-react";
-import { Button } from "../button";
+import { Button } from "../button/button";
 import { useState } from "react";
 import { CSS } from "@dnd-kit/utilities"
 import { AnimatePresence } from "framer-motion";
