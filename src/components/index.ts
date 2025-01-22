@@ -5,4 +5,4 @@ export * from "./input/input";
 export * from "./button/button";
 export * from "./container/container";
 
-export const Modal = lazy(()=> import("../modal/modal"))
+export const Modal = lazy(()=> import("./modal/modal"))
