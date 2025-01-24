@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from "react";
 import { Button, Container, Input, Items, Modal } from "./components";
 
 import {
@@ -19,6 +19,7 @@ import {
   onDeleteItem,
   findContainerNameByItemId,
   isContainerNameEmpty,
+  isItemNameEmpty,
   isEditingContainerNameChanged,
   isEditingItemNameChanged,
 } from "./lib";
@@ -33,51 +34,50 @@ import {
   useSensor,
   useSensors,
 } from "@dnd-kit/core";
-
 import {
   SortableContext,
   sortableKeyboardCoordinates,
 } from "@dnd-kit/sortable";
-
 import { Layout, Text, Trash2 } from "lucide-react";
 
 export default function App() {
- const [containerName, setContainerName] = useState("")
- const { containers, setContainers, addContainer } = useContainerStore();
- const [activeId, setActiveId] = useState<UniqueIdentifier | null>(null);
- const [showAddContainerModal, setShowAddContainerModal] = useState(false);
- const [showAddItemModal, setShowAddItemModal] = useState(false);
- const [showEditContainerModal, setShowEditContainerModal] = useState(false);
- const [currentContainerId, setCurrentContainerId] = useState<UniqueIdentifier>();
- const [itemName, setItemName] = useState("");
- const [editingContainer, setEditingContainer] = useState<UniqueIdentifier | null>(null);
- const [editingContainerName, setEditingContainerName] = useState("");
+  const [containerName, setContainerName] = useState("");
+  const { containers, setContainers, addContainer } = useContainerStore();
+  const [activeId, setActiveId] = useState<UniqueIdentifier | null>(null);
+  const [showAddContainerModal, setShowAddContainerModal] = useState(false);
+  const [showAddItemModal, setShowAddItemModal] = useState(false);
+  const [showEditContainerModal, setShowEditContainerModal] = useState(false);
+  const [currentContainerId, setCurrentContainerId] =
+    useState<UniqueIdentifier>();
+  const [itemName, setItemName] = useState("");
+  const [editingContainer, setEditingContainer] =
+    useState<UniqueIdentifier | null>(null);
+  const [editingContainerName, setEditingContainerName] = useState("");
 
- const [showEditItemModal, setShowEditItemModal] = useState(false);
- const [editingItem, setEditingItem] = useState<UniqueIdentifier | null>(null);
- const [editingItemName, setEditingItemName] = useState("");
+  const [showEditItemModal, setShowEditItemModal] = useState(false);
+  const [editingItem, setEditingItem] = useState<UniqueIdentifier | null>(null);
+  const [editingItemName, setEditingItemName] = useState("");
 
- const sensors = useSensors(
-  useSensor(PointerSensor),
-  useSensor(KeyboardSensor, {
-    coordinateGetter: sortableKeyboardCoordinates,
-  })
- );
+  const sensors = useSensors(
+    useSensor(PointerSensor),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    })
+  );
 
- const containerNameForEditingItem = findContainerNameByItemId(
+  const containerNameForEditingItem = findContainerNameByItemId(
     containers,
     editingItem
- );
-
+  );
 
   return (
-    <div className='mx-auto max-w-7xl'>
+    <div className="mx-auto max-w-7xl">
       <Modal
         showModal={showAddContainerModal}
         setShowModal={setShowAddContainerModal}
       >
-        <div className='flex flex-col w-full items-start gap-y-4'>
-          <h1 className='text-gray-800 text-xl md:text-2xl font-bold text-center mx-auto'>
+        <div className="flex flex-col w-full items-start gap-y-4">
+          <h1 className="text-gray-800 text-xl md:text-2xl font-bold text-center mx-auto">
             Add Container
           </h1>
           <Input
@@ -85,12 +85,12 @@ export default function App() {
             placeholder="Container Title"
             name="containername"
             value={containerName}
-            onChange={(event) => setContainerName(event.target.value)} 
+            onChange={(event) => setContainerName(event.target.value)}
           />
-          <Button 
+          <Button
             fullWidth={true}
             label="Add container"
-            onClick={() => 
+            onClick={() =>
               onAddContainer(
                 containerName,
                 setContainerName,
@@ -248,7 +248,7 @@ export default function App() {
       </Modal>
       <div className="flex items-center justify-between gap-y-2">
         <h1 className="text-gray-800 text-xl md:text-3xl font-bold">
-          DragTrack
+          Chaka Kan
         </h1>
         <Button
           onClick={() => setShowAddContainerModal(true)}
@@ -338,7 +338,5 @@ export default function App() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-
-
