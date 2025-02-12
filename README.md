@@ -1,7 +1,7 @@
 <!-- Headings -->
 <div align="center">
     <h1>Chaka Khan - A Kanban-Style Project</h1>
-    
+    # **** 
     <h6>
         built with <a href="https://nextjs.org">Vite</a> &
         hosted by <a href="https://vercel.com/">Vercel</a> 
