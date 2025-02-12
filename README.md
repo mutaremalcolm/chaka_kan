@@ -1,51 +1,57 @@
-# React + TypeScript + Vite
+<!-- Headings -->
+<div align="center">
+    <h1>Chaka Khan - A Kanban Board for Drag and Drop</h1>
+    <h6>
+        built with <a href="https://nextjs.org">Vite</a> &
+        hosted by <a href="https://vercel.com/">Vercel</a> 
+    </h6>
+    <!-- <h3> ⚠ Currently a work in progress ⚠</h3> -->
+    <h4>
+      <a href='https://chaka-kan-mutaremalcolms-projects.vercel.app/', target='_blank'>
+        🔗 demo website
+      </a>
+    </h4>
+    <!-- <h4>
+      <a href='https://ztm-ready-documentation.vercel.app/', target='_blank'>
+        🔗 documentation website 
+      </a>
+    </h4> -->
+    <hr>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- Logo -->
+<!-- <p align='center'>
+<a href='🎯', target='_blank'>
+    <img src="🎯" alt="Demo" title="DemoImage" width="500" height="300">
+</a>
+</p> -->
 
-Currently, two official plugins are available:
+<!-- -------------------------------------------------------------------------- -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Chaka Khan Application  
 
-## Expanding the ESLint configuration
+# **Chaka Khan - A Kanban-Style Project**  
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**Chaka Khan** is a **drag-and-drop Kanban board** built with modern web technologies to provide a seamless and intuitive experience for task organization. Designed with flexibility in mind, it allows users to create, edit, and manage tasks across multiple containers effortlessly.  
 
-- Configure the top-level `parserOptions` property like this:
+## **Tech Stack**  
+- **React** – Component-based UI for a responsive experience  
+- **TypeScript** – Ensuring type safety and maintainability  
+- **DnD-Kit** – For smooth and customizable drag-and-drop interactions  
+- **Tailwind CSS** – Utility-first styling for fast and flexible design  
+- **Framer Motion** – Adding animations for a polished user experience  
+- **Lucide Icons** – Elegant and lightweight icons for better UI clarity  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## **Key Features**  
+✔ **Drag-and-drop containers** – Organize your tasks visually with smooth movement.  
+✔ **Drag-and-drop items between containers** – Seamlessly rearrange tasks across different lists.  
+✔ **Add containers and items** – Dynamically create new workflow sections and tasks, all draggable.  
+✔ **Delete containers and items** – Remove unnecessary tasks or categories effortlessly.  
+✔ **Edit container and item names** – Customize and rename elements to match your workflow.  
+✔ **Visual editing indicators** – Clearly see which container you're currently modifying.  
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## **Why Chaka Khan?**  
+This project emphasizes **interactive UI elements** and **state management**, making it an excellent demonstration of handling complex **drag-and-drop mechanics** in React. The integration of **Framer Motion** enhances the UX by ensuring smooth animations, while **DnD-Kit** provides a powerful, accessible drag-and-drop experience.  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Whether you're managing personal projects, team workflows, or brainstorming ideas, **Chaka Khan** delivers an efficient and enjoyable way to organize your tasks.  
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# chaka_kan
